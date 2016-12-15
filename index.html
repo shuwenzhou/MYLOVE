@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我雯最棒了</title>
+    <style type="text/css">
+        div {
+            width: 810px;
+            height: 320px;
+            font: 600 15px/15px "楷体";
+            border: 3px double blue;
+            margin: 200px auto;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <pre>
+         <span>我</span><span>喜</span><span>欢</span><span>你</span><span>我</span><span>喜</span><span>欢</span><span>你</span>         <span>我</span>            <span>喜</span>               <span>欢</span>       <span>你</span><span>我</span><span>喜</span><span>欢</span><span>你</span><span>我</span><span>喜</span><span>欢</span><span>你</span>
+               <span>我</span>              <span>喜</span><span>欢</span><span>你</span><span>我</span> <span>喜</span>    <span>欢</span><span>你</span><span>我</span><span>喜</span><span>欢</span><span>你</span>   <span>我</span>  <span>喜</span>  <span>欢</span>  <span>你</span>    <span>我</span>          <span>喜</span>
+               <span>欢</span>                 <span>你</span>  <span>我</span>     <span>喜</span><span>欢</span>    <span>你</span>       <span>我</span> <span>喜</span> <span>欢</span>     <span>你</span><span>我</span><span>喜</span><span>欢</span><span>你</span><span>我</span><span>喜</span><span>欢</span>
+               <span>你</span>           <span>我</span><span>喜</span><span>欢</span><span>你</span><span>我</span><span>喜</span><span>欢</span>  <span>你</span>  <span>我</span>  <span>喜</span>         <span>欢</span><span>你</span><span>我</span>        <span>喜</span>
+          <span>欢</span><span>你</span><span>我</span><span>喜</span><span>欢</span><span>你</span><span>我</span>           <span>喜</span>            <span>欢</span><span>你</span>       <span>我</span><span>喜</span><span>欢</span><span>你</span><span>我</span><span>喜</span>    <span>欢</span>   <span>你</span>
+               <span>我</span>               <span>喜</span>  <span>欢</span><span>你</span><span>我</span>        <span>喜</span>            <span>欢</span> <span>你</span>      <span>我</span><span>喜</span><span>欢</span><span>你</span><span>我</span><span>喜</span><span>欢</span><span>你</span>
+               <span>我</span>             <span>喜</span>       <span>欢</span> <span>你</span>    <span>我</span> <span>喜</span>           <span>欢</span> <span>你</span>            <span>我</span>
+               <span>喜</span>                    <span>欢</span> <span>你</span>     <span>我</span>   <span>喜</span>         <span>欢</span>  <span>你</span> <span>我</span>  <span>喜</span><span>欢</span><span>你</span><span>我</span><span>喜</span><span>欢</span><span>你</span><span>我</span><span>喜</span>
+        <span>欢</span><span>你</span><span>我</span><span>喜</span><span>欢</span><span>你</span><span>喜</span><span>欢</span><span>你</span>            <span>赠</span><span>小</span>    <span>雯</span>     <span>最</span>       <span>爱</span>   <span>的</span><span>阿</span>          <span>辉</span>
+    </pre>
+    </div>
+    <script type="text/javascript">
+        var num = 0,index = 0, cost = 0 ;
+        var deng = [];
+        function change() {
+            deng = document.getElementsByTagName("span")[num];
+            if(num == 147) {
+                num = 0;
+                index = 0;
+                cost = 1;
+            }
+            if(num % 4 == 0) {
+                deng.style.color = "lime";
+                deng.style.lineHeight = deng.style.lineHeight + 2*Math.pow(-1,cost) ;
+
+                if(index !== 0){
+                    var deng1 = document.getElementsByTagName("span")[num-1];
+                    deng1.style.color = "orangered";
+                }
+                num++;
+                index = 1;
+            }else if(num  % 4 == 1) {
+                deng.style.color = "#FF4FFF";
+                var deng1 = document.getElementsByTagName("span")[num-1];
+                deng1.style.color = "blue";
+                num++;
+
+            }else if(num  % 4 == 2) {
+                deng.style.color = "cyan";
+                var deng1 = document.getElementsByTagName("span")[num-1];
+                deng1.style.color = "fuchsia";
+                num++;
+            }else if(num  % 4 == 3) {
+                deng.style.color = "yellow";
+                var deng1 = document.getElementsByTagName("span")[num-1];
+                deng1.style.color = "blueviolet";
+                num++;
+            }
+        }
+        setInterval(change,150);
+    </script>
+
+</body>
+</html>
