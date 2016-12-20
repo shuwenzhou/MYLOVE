@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        span{
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<pre>
+<span>我</span><span>就</span><span>是</span><span>爱</span><span>音</span><span>乐</span><span>别</span><span>叫</span><span>我</span><span>停</span>
+<span>下</span><span>来</span><span>我</span><span>就</span><span>是</span><span>爱</span><span>唱</span><span>歌</span><span>别</span>
+<span>叫</span><span>我</span><span>停</span><span>下</span><span>来</span><span>我</span><span>就</span><span>火</span>
+<span>我</span><span>我</span><span>我</span><span>我</span><span>我</span><span>我</span><span>我</span>
+<span>我</span><span>我</span><span>我</span><span>我</span><span>我</span><span>我</span>
+<span>我</span><span>我</span><span>我</span><span>我</span><span>我</span>
+<span>我</span><span>我</span><span>我</span><span>我</span>
+<span>我</span><span>我</span><span>我</span>
+<span>我</span><span>我</span>
+<span>我</span>
+</pre>
+<script type="text/javascript">
+    var num = 0,index=0;
+    function change() {
+        var deng = document.getElementsByTagName("span")[num];
+        if(num % 3== 0) {
+            deng.style.color = "red";
+            if(index!==0){
+                var deng1 = document.getElementsByTagName("span")[num-1];
+                deng1.style.color = "black";
+            }
+            num++;
+            index=1;
+        }else if(num  % 3== 1) {
+            deng.style.color = "yellow";
+            var deng1 = document.getElementsByTagName("span")[num-1];
+            deng1.style.color = "black";
+            num++;
+
+        }else if(num  % 3== 2) {
+            deng.style.color = "blue";
+            var deng1 = document.getElementsByTagName("span")[num-1];
+            deng1.style.color = "black";
+            num++;
+        }
+    }
+    setInterval(change,100);
+</script>
+</body>
+<html>
